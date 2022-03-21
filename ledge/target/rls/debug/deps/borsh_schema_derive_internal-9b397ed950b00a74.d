@@ -1,0 +1,10 @@
+/home/wiz/Documents/wizProjects/Playcontract/ledge/target/rls/debug/deps/borsh_schema_derive_internal-9b397ed950b00a74.rmeta: /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/lib.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/helpers.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/enum_schema.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/struct_schema.rs
+
+/home/wiz/Documents/wizProjects/Playcontract/ledge/target/rls/debug/deps/libborsh_schema_derive_internal-9b397ed950b00a74.rlib: /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/lib.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/helpers.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/enum_schema.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/struct_schema.rs
+
+/home/wiz/Documents/wizProjects/Playcontract/ledge/target/rls/debug/deps/borsh_schema_derive_internal-9b397ed950b00a74.d: /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/lib.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/helpers.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/enum_schema.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/struct_schema.rs
+
+/home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/lib.rs:
+/home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/helpers.rs:
+/home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/enum_schema.rs:
+/home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.8.2/src/struct_schema.rs:

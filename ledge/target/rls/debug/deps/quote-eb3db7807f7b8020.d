@@ -1,0 +1,13 @@
+/home/wiz/Documents/wizProjects/Playcontract/ledge/target/rls/debug/deps/quote-eb3db7807f7b8020.rmeta: /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/lib.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ext.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/format.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ident_fragment.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/to_tokens.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/runtime.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/spanned.rs
+
+/home/wiz/Documents/wizProjects/Playcontract/ledge/target/rls/debug/deps/libquote-eb3db7807f7b8020.rlib: /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/lib.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ext.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/format.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ident_fragment.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/to_tokens.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/runtime.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/spanned.rs
+
+/home/wiz/Documents/wizProjects/Playcontract/ledge/target/rls/debug/deps/quote-eb3db7807f7b8020.d: /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/lib.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ext.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/format.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ident_fragment.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/to_tokens.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/runtime.rs /home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/spanned.rs
+
+/home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/lib.rs:
+/home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ext.rs:
+/home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/format.rs:
+/home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ident_fragment.rs:
+/home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/to_tokens.rs:
+/home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/runtime.rs:
+/home/wiz/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/spanned.rs:
