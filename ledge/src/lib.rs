@@ -1,6 +1,7 @@
 // external rust modules 
 use near_sdk::{near_bindgen, env};
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
+use near_sdk::init;
 use std::time::{Instant,Duration};
 
 
@@ -22,15 +23,17 @@ pub struct Contract{
 pub static COLLECT_CON : bool = true;
 pub static LEGAL_BIND : u64 = Duration::from_secs(24*60*60).as_secs();
 
-// Contract Players Either Bob owned asset legally or Alice will.
+#[derive(BorshSerialize, BorshDeserialize)]
 #[derive(PartialEq, Debug,Clone, Copy)]
-enum Characters{
+// Contract Players Either Bob owned asset legally or Alice will.
+pub enum Characters{
     Bob,
     Alice,
 }
 
-// Bob and Alice Balance sheet for asset
+#[derive(BorshSerialize, BorshDeserialize)]
 #[derive(PartialEq,Debug,Clone)]
+// Bob and Alice Balance sheet for asset
 pub struct Contractor{
     signed_account : String,
     balance : f64,
@@ -39,11 +42,21 @@ pub struct Contractor{
     votes : i64,
 }
 
-#[near_bindgen]
 impl Contract {
 
+    #[init]
+    pub fn init(c : Contractor, owner : String) -> Self {
+        Self{
+                signed_account : c.signed_account.clone(), 
+                gas : c.balance * 0.2,
+                timestamp : Instant::now().elapsed().as_secs(),
+                collect : false,
+                duration : LEGAL_BIND,
+                ledge_account : owner.clone(),    
+        }
+    }
     // "Alice" & "Bob" apply for legal business
-    fn new(self, c : Contractor, owner : String) -> Contract{
+    pub fn new(self, c : Contractor, owner : String) -> Contract{
         Contract {
             signed_account : c.signed_account.clone(),
             gas : c.balance * 0.2,
@@ -64,7 +77,7 @@ impl Contract {
 impl Contractor{
 
     // "Alice" & "Bob" create balance sheet in BLOCK-CHAIN
-    fn new_contractor(&self, signed_account : String, choice: Characters) -> Contractor {
+    pub fn new_contractor(&self, signed_account : String, choice: Characters) -> Contractor {
         
         Contractor{
             signed_account: signed_account.clone(),
@@ -124,6 +137,7 @@ impl Contractor{
     // Art transfer to one of the party based on Monopoly game
     fn change_owership(&mut self, a: &mut Artifact, contractor : String) -> Contract{
         
+        #[warn(unused_mut)]
         let mut logs;
         
         // pay the amount if you win
@@ -155,7 +169,7 @@ pub static BID_VALUE : u64 = 30;
 
 // Buy with Aution or without aution
 #[derive(Debug, PartialEq, Clone)]
-enum BuyingStatus{ Auction, None}
+pub enum BuyingStatus{ Auction, None}
 
 
 // art object
@@ -174,7 +188,7 @@ pub struct Artifact{
 impl Artifact{
 
     // create art with public information 
-    fn new_collections(&self) -> Artifact{
+    pub fn new_collections(&self) -> Artifact{
         Artifact{
             name : COLLECTION_NAME.to_string(),
             options : BuyingStatus::None,
@@ -236,26 +250,21 @@ impl Artifact{
 #[cfg(test)]
 mod tests {
     use super::*;
-    use near_sdk::test_utils::{get_logs, VMContextBuilder};
-    use near_sdk::{testing_env, AccountId};
-    use near_sdk::json_types::{ValidAccountId};
-
-    // part of writing unit tests is setting up a mock context
-    // provide a `predecessor` here, it'll modify the default context
-    fn get_context(predecessor: ValidAccountId) -> VMContextBuilder {
-        let mut builder = VMContextBuilder::new();
-        builder.predecessor_account_id(predecessor);
-        builder
-    }
+    use near_sdk::test_utils::{get_logs,VMContextBuilder};
+    use near_sdk::{testing_env};
+    // use near_sdk::json_types::{ValidAccountId};
+    use near_sdk::MockedBlockchain;
 
     #[test]
     // Execute contract
-    pub fn get_contractor(){
+    fn get_contractor(){
+
+        testing_env!(VMContextBuilder::new().build());
         
+        #[warn(unused_mut)]
         let mut logs;
         let mut contract = Vec::<Contractor>::new();
-        
-        
+
         let ledge = Contractor{signed_account: "".to_string(), balance : 0.00, nick : Characters::Bob,signed:false, votes : 0,};
         contract.push(ledge.new_contractor("mxhHjc8g2xeYgnqqACiF7DEQegZHyLJEon".to_string(), Characters::Bob));
         contract.push(ledge.new_contractor("n2Fhga9AsZ2XmEd6bqbKfLPd8D4ySG4uY".to_string(), Characters::Alice));
@@ -323,9 +332,10 @@ mod tests {
               logs = format!("Ledger: {:#?}", c.clone().change_owership(own, own.who_owned.clone()));
               env::log(logs.as_bytes());
            }
-
            
         }
+
+        println!("Logs: {:#?}", get_logs());
         
     }
     
