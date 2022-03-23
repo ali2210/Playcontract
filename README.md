@@ -41,3 +41,7 @@ Additional commands for near contract
 
 Contract Explorer
     https://explorer.testnet.near.org/transactions/HTBab46sAUq7uFbVdmZ3FYwu6HYMp4Z5hjTBXRCiaXBi
+    https://explorer.testnet.near.org/transactions/AkhdyoypmKHtEZTc9KfyK8mC8Mt4c9myuYpLPCwBcdht
+
+Limitation 
+    There are other ways to optimise the contract, for the learn purpose it is good. However, it's little complex more https://www.near-sdk.io/building/basic-build .
