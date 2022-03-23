@@ -30,7 +30,7 @@ Additional commands for near contract
     near view abc.testnet
     $ near view abc.testnet
     
-    near create-account rust_module_name.testnet_name --master_account testnet_name
+    near create-account contract_name.testnet_name --master_account testnet_name
     $ near create-account ledge.abc.testnet --master_account abc.testnet
 
     near state abc.testnet
@@ -38,6 +38,12 @@ Additional commands for near contract
 
     near keys abc.testnet
     near deploy --accountId abc.testnet --wasmFile res/wasm_Project_file
+    
+    near contract_name.abc.testnet  abc.testnet 
+    $ near delete ledge.playcontract.testnet playcontract.testnet
+    
+    near call contract_name.abc.testnet function_name '{"Param_1", "value"}'
+    $ near call contract_name.abc.testnet init '{"account", "HTBab46sAUq7uFbVdmZ3FYwu6HYMp4Z5hjTBXRCiaXBi"}'
 
 Contract Explorer
     https://explorer.testnet.near.org/transactions/HTBab46sAUq7uFbVdmZ3FYwu6HYMp4Z5hjTBXRCiaXBi
